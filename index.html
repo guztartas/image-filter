@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Processamento de imagens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <label for="">1</label>
+        <input type="file" id="file1" />
+
+        <label for="">Ordem</label>
+        <input type="text" id="order">
+
+        <label for="">Tamanho do filtro</label>
+        <input type="text" value="3" id="filter-size">
+        <button id="bumit-btn" onclick="filtrar()">Processar</button>
+
+        <img src="" id="img1" alt="" />
+        <img src="" id="img2" alt="" />
+
+        <br />
+        <br />
+
+        <h1>Resultado:</h1>
+        <div id="canvas-wrapper"></div>
+
+        <div id="before_distribution" style="width: 900px; height: 500px;"></div>
+        <div id="after_distribution" style="width: 900px; height: 500px;"></div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="src/index.js"></script>
+<script src="src/processamentoDeImagens/equalizacaoDeHistograma.js"></script>
+<script src="src/processamentoDeImagens/filtragemPorMedia.js"></script>
+<script src="src/processamentoDeImagens/filtragemPorValorMinimo.js"></script>
+<script src="src/processamentoDeImagens/filtragemPorValorMaximo.js"></script>
+<script src="src/processamentoDeImagens/filtragemPorOrdem.js"></script>
+<script src="src/processamentoDeImagens/filtragemPorMediana.js"></script>
+<script src="src/processamentoDeImagens/filtragemDeSuavizacaoConservativa.js"></script>
+<script src="src/processamentoDeImagens/filtragemGaussiana.js"></script>
+<script src="src/padroes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</html>
