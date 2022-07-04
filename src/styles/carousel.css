@@ -1,0 +1,81 @@
+.container-carousel {
+    position: relative;
+    width: 20px;
+    margin: 100px 53% 0;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 60s infinite forwards linear;
+}
+
+.carousel__face {
+    position: absolute;
+    width: 186px;
+    height: 187px;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+p {
+    top: 190px;
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+    width: max-content;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.carousel__face:nth-child(1) {
+    transform: rotateY( 0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+    transform: rotateY( 46deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+    transform: rotateY( 91deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+    transform: rotateY(136deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+    transform: rotateY(181deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+    transform: rotateY(226deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+    transform: rotateY(271deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}

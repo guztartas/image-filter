@@ -1,0 +1,55 @@
+.container {
+    margin: 3% auto;
+}
+
+.form-image {
+    display: grid;
+    max-width: 800px;
+    margin: auto;
+}
+
+.form-image label {
+    margin: 24px 0 8px;
+}
+
+button {
+    margin-top: 24px;
+}
+
+.form-image-show {
+    width: max-content;
+    margin: 32px auto;
+}
+
+.form-image-show img {
+    max-width: 400px;
+}
+
+h1 {
+    width: max-content;
+    margin: 64px auto;
+}
+
+.charts {
+    width: min-content;
+    margin: 730px auto 0;
+}
+
+#text1 {
+    position: relative;
+}
+
+#text1 img {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+/* 
+.charts div {
+    width: 900px;
+    height: 500px;
+} */

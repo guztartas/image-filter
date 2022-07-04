@@ -53,6 +53,7 @@ const transformTodesenharGrafico = (arr) => arr.map((item, idx) => [idx, item]);
 
 function draw(img, texto, larguraImagem, alturaImagem) {
     const wrapper = document.createElement("div");
+    wrapper.classList.add('carousel__face');
     const label = document.createElement("p");
     label.innerText = texto;
 
@@ -97,7 +98,7 @@ async function iniciarFiltragemPorMediana() {
 async function iniciarFiltroPorValorMinimo() {
     const tamanhoDoFiltro = parseInt(document.getElementById('filter-size').value);
     const [dados1, dados2] = await Promise.all([getImageData("file1", "img1")]);
-    const valoresDaImagem = minimumFilter(dados1.imgData, dados1.width, tamanhoDoFiltro);
+    const valoresDaImagem = filtragemPorValorMinimo(dados1.imgData, dados1.width, tamanhoDoFiltro);
     draw(valoresDaImagem, "Filtragem por Valor Mínimo", dados1.width, dados1.width);
 }
 
@@ -147,6 +148,12 @@ async function iniciarFiltroDeGaussiana() {
 }
 
 async function filtrar() {
+    var text1 = document.querySelector('#text1');
+    var text2 = document.querySelector('#text2');
+
+    text1.style.display = "";
+    text2.style.display = "";
+
     iniciarFiltroDeGaussiana();
     iniciarFiltroPorValorMinimo();
     iniciarFiltragemDeSuavizacaoConservativaFilter();
